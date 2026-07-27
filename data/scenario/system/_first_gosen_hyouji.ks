@@ -1,0 +1,5 @@
+[preload  storage="./data/fgimage/default/onpu_kasen.png"  ]
+[preload  storage="./data/fgimage/default/onpu_zen.png"  ]
+[preload  storage="./data/fgimage/default/onpu_flat.png"  ]
+[preload  storage="./data/fgimage/default/onpu_sharp.png"  ]
+[return]

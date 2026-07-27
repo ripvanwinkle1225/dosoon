@@ -1,0 +1,8 @@
+[preload  storage="./data/fgimage/default/note_c.png"  ]
+[preload  storage="./data/fgimage/default/note_d.png"  ]
+[preload  storage="./data/fgimage/default/note_e.png"  ]
+[preload  storage="./data/fgimage/default/note_f.png"  ]
+[preload  storage="./data/fgimage/default/note_g.png"  ]
+[preload  storage="./data/fgimage/default/note_a.png"  ]
+[preload  storage="./data/fgimage/default/note_b.png"  ]
+[return]
