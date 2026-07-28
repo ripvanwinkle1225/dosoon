@@ -27,13 +27,8 @@ originalStart.call(customGlink, pm);
 ;標準のメッセージレイヤを非表示
 
 
-[tb_hide_message_window  ]
-
-;タイトル表示
-
-
-[bg  storage="title_bg.png"  time="500"  method="fadeIn"  cross="true"  ]
-[chara_show  name="title_logo"  time="0"  wait="true"  storage="chara/1/dosoon_logo.png"  width="960"  height="640"  top="-320"  ]
+[chara_show  name="title_logo"  time="1"  wait="true"  storage="chara/1/dosoon_logo.png"  width="960"  height="640"  top="-320"  ]
+[bg  time="500"  method="puffIn"  storage="title_bg.png"  cross="true"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="se_doon_2.ogg"  clear="true"  ]
 [chara_move  name="title_logo"  anim="true"  time="500"  effect="easeInQuad"  wait="true"  left="0"  top="0"  width="960"  height="640"  ]
 [chara_move  name="title_logo"  anim="true"  time="250"  effect="easeOutQuad"  wait="true"  top="-120"  left="0"  width="960"  height="640"  ]
@@ -46,8 +41,8 @@ originalStart.call(customGlink, pm);
 [chara_move  name="title_logo"  anim="true"  time="100"  effect="easeInQuad"  wait="true"  top="0"  left="0"  width="960"  height="640"  ]
 [wait  time="300"  ]
 [playbgm  volume="80"  time="1000"  loop="true"  storage="dosoon_blues.ogg"  ]
-[tb_image_show  time="0"  storage="default/interval_quiz_logo.png"  width="960"  height="640"  name="img_20"  ]
-[tb_image_show  time="0"  storage="default/taikenban_1.0_logo.png"  width="960"  height="640"  x=""  y=""  _clickable_img=""  ]
+[tb_image_show  time="1"  storage="default/interval_quiz_logo.png"  width="960"  height="640"  name="img_20"  ]
+[tb_image_show  time="1"  storage="default/taikenban_1.0_logo.png"  width="960"  height="640"  x=""  y=""  _clickable_img=""  ]
 [tb_keyconfig  flag="1"  ]
 *title
 

@@ -24,14 +24,14 @@
 [jump  storage="interval_select.ks"  target="*suuji_select"  ]
 *suuji_select
 
-[glink  color="btn_02_black"  storage="interval_select.ks"  size="40"  text="1度"  target="*suuji_1"  x="20"  y="401"  width="110"  height="95"  _clickable_img=""  ]
-[glink  color="btn_02_black"  storage="interval_select.ks"  size="40"  text="2度"  target="*suuji_2"  x="150"  y="401"  width="110"  height="95"  _clickable_img=""  ]
-[glink  color="btn_02_black"  storage="interval_select.ks"  size="40"  text="3度"  target="*suuji_3"  x="280"  y="401"  width="110"  height="95"  _clickable_img=""  ]
-[glink  color="btn_02_black"  storage="interval_select.ks"  size="40"  text="4度"  target="*suuji_4"  x="410"  y="401"  width="110"  height="95"  _clickable_img=""  ]
-[glink  color="btn_02_black"  storage="interval_select.ks"  size="40"  text="5度"  target="*suuji_5"  x="540"  y="401"  width="110"  height="95"  _clickable_img=""  ]
-[glink  color="btn_02_black"  storage="interval_select.ks"  size="40"  text="6度"  target="*suuji_6"  x="670"  y="401"  width="110"  height="95"  _clickable_img=""  ]
-[glink  color="btn_02_black"  storage="interval_select.ks"  size="40"  text="7度"  target="*suuji_7"  x="800"  y="401"  width="110"  height="95"  _clickable_img=""  ]
-[glink  color="btn_02_black"  storage="interval_select.ks"  size="40"  text="8度"  target="*suuji_8"  x="80"  y="511"  width="110"  height="95"  _clickable_img=""  ]
+[glink  color="btn_02_black"  storage="interval_select.ks"  size="40"  text="1度"  target="*suuji_1"  x="20"  y="401"  width="115"  height="95"  _clickable_img=""  ]
+[glink  color="btn_02_black"  storage="interval_select.ks"  size="40"  text="2度"  target="*suuji_2"  x="150"  y="401"  width="115"  height="95"  _clickable_img=""  ]
+[glink  color="btn_02_black"  storage="interval_select.ks"  size="40"  text="3度"  target="*suuji_3"  x="280"  y="401"  width="115"  height="95"  _clickable_img=""  ]
+[glink  color="btn_02_black"  storage="interval_select.ks"  size="40"  text="4度"  target="*suuji_4"  x="410"  y="401"  width="115"  height="95"  _clickable_img=""  ]
+[glink  color="btn_02_black"  storage="interval_select.ks"  size="40"  text="5度"  target="*suuji_5"  x="540"  y="401"  width="115"  height="95"  _clickable_img=""  ]
+[glink  color="btn_02_black"  storage="interval_select.ks"  size="40"  text="6度"  target="*suuji_6"  x="670"  y="401"  width="115"  height="95"  _clickable_img=""  ]
+[glink  color="btn_02_black"  storage="interval_select.ks"  size="40"  text="7度"  target="*suuji_7"  x="800"  y="401"  width="115"  height="95"  _clickable_img=""  ]
+[glink  color="btn_02_black"  storage="interval_select.ks"  size="40"  text="8度"  target="*suuji_8"  x="80"  y="511"  width="115"  height="95"  _clickable_img=""  ]
 [s  ]
 *suuji_1
 

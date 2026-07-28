@@ -1,6 +1,3 @@
 [hidemenubutton] 
-[eval exp="f._system_preview_ks='scene1.ks'"] 
-[preload  storage="./data/bgimage/title_bg.png"  ]
-[preload  storage="./data/fgimage/default/interval_quiz_logo.png"  ]
-[preload  storage="./data/fgimage/default/taikenban_1.0_logo.png"  ]
+[eval exp="f._system_preview_ks='title_screen.ks'"] 
 [return] 
