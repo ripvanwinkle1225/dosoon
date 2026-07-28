@@ -4,7 +4,7 @@
         <title>Loading TyranoScript</title>
 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
         <meta name="robots" content="noindex,nofollow" />
 
         <link href="./tyrano/tyrano.css" rel="stylesheet" />
@@ -34,6 +34,28 @@
             }
 
         </script>
+<style>
+  html, body {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    background-color: #000000; /* 画面外の余白を黒にする設定 */
+  }
+  #tyrano_base {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-size: contain !important; /* アスペクト比を維持して最大化 */
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+</style>
+
+
 
         <!-- jQuery Plugins -->
         <script src="./tyrano/libs/jquery-migrate-1.4.1.js"></script>
