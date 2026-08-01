@@ -12,3 +12,7 @@
 
 [wait  time="300"  ]
 [return  ]
+*1000ms
+
+[wait  time="1000"  ]
+[return  ]

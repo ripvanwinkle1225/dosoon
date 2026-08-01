@@ -194,7 +194,7 @@
 [tb_eval  exp="f.interval=0"  name="interval"  cmd="="  op="t"  val="0"  ]
 [tb_eval  exp="f.interval_answer=0"  name="interval_answer"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
 [stopbgm  time="300"  fadeout="true"  ]
-[jump  storage="title_screen.ks"  target=""  ]
+[jump  storage="scene1.ks"  target=""  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 ※バグ発見！※[p]

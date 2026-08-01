@@ -27,22 +27,40 @@ originalStart.call(customGlink, pm);
 ;標準のメッセージレイヤを非表示
 
 
-[chara_show  name="title_logo"  time="1"  wait="true"  storage="chara/1/dosoon_logo.png"  width="960"  height="640"  top="-320"  ]
+[chara_show  name="title_logo"  time="0"  wait="true"  storage="chara/1/dosoon_logo.png"  width="755"  height="205"  top="-300"  left="0"  ]
+[call  storage="wait.ks"  target="*300ms"  ]
 [bg  time="500"  method="puffIn"  storage="title_bg.png"  cross="true"  ]
+[tb_start_tyrano_code]
+; --- 1. アニメーションの動きを定義 ---
+[keyframe name="dosoon_loop_anim"]
+[frame p="0%"   y="0"]
+[frame p="50%"  y="-20"]
+[frame p="100%" y="0"]
+[endkeyframe]
+
+; --- 2. 画像を手前レイヤーに配置（x の数値を 500 に大きくして右にずらしました） ---
+[image name="my_dosoon" storage="../bgimage/dosoon.png" layer="1" visible="true" x="680" y="160" width="260" height="230"]
+
+; --- 3. 無限ループアニメーションを実行 ---
+[kanim name="my_dosoon" keyframe="dosoon_loop_anim" time="4000" count="infinite" easing="linear" wait="false"]
+
+[_tb_end_tyrano_code]
+
+[call  storage="wait.ks"  target="*300ms"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="se_doon_2.ogg"  clear="true"  ]
-[chara_move  name="title_logo"  anim="true"  time="500"  effect="easeInQuad"  wait="true"  left="0"  top="0"  width="960"  height="640"  ]
-[chara_move  name="title_logo"  anim="true"  time="250"  effect="easeOutQuad"  wait="true"  top="-120"  left="0"  width="960"  height="640"  ]
-[chara_move  name="title_logo"  anim="true"  time="250"  effect="easeInQuad"  wait="true"  top="0"  left="0"  width="960"  height="640"  ]
-[chara_move  name="title_logo"  anim="true"  time="200"  effect="easeOutQuad"  wait="true"  top="-60"  left="0"  width="960"  height="640"  ]
-[chara_move  name="title_logo"  anim="true"  time="200"  effect="easeInQuad"  wait="true"  top="0"  left="0"  width="960"  height="640"  ]
-[chara_move  name="title_logo"  anim="true"  time="150"  effect="easeOutQuad"  wait="true"  top="-30"  left="0"  width="960"  height="640"  ]
-[chara_move  name="title_logo"  anim="true"  time="150"  effect="easeInQuad"  wait="true"  top="0"  left="0"  width="960"  height="640"  ]
-[chara_move  name="title_logo"  anim="true"  time="100"  effect="easeOutQuad"  wait="true"  top="-15"  left="0"  width="960"  height="640"  ]
-[chara_move  name="title_logo"  anim="true"  time="100"  effect="easeInQuad"  wait="true"  top="0"  left="0"  width="960"  height="640"  ]
+[chara_move  name="title_logo"  anim="true"  time="500"  effect="easeInQuad"  wait="true"  left="0"  top="0"  width="755"  height="205"  ]
+[chara_move  name="title_logo"  anim="true"  time="250"  effect="easeOutQuad"  wait="true"  top="-120"  left="0"  width="755"  height="205"  ]
+[chara_move  name="title_logo"  anim="true"  time="250"  effect="easeInQuad"  wait="true"  top="0"  left="0"  width="755"  height="205"  ]
+[chara_move  name="title_logo"  anim="true"  time="200"  effect="easeOutQuad"  wait="true"  top="-60"  left="0"  width="755"  height="205"  ]
+[chara_move  name="title_logo"  anim="true"  time="200"  effect="easeInQuad"  wait="true"  top="0"  left="0"  width="755"  height="205"  ]
+[chara_move  name="title_logo"  anim="true"  time="150"  effect="easeOutQuad"  wait="true"  top="-30"  left="0"  width="755"  height="205"  ]
+[chara_move  name="title_logo"  anim="true"  time="150"  effect="easeInQuad"  wait="true"  top="0"  left="0"  width="755"  height="205"  ]
+[chara_move  name="title_logo"  anim="true"  time="100"  effect="easeOutQuad"  wait="true"  top="-15"  left="0"  width="755"  height="205"  ]
+[chara_move  name="title_logo"  anim="true"  time="100"  effect="easeInQuad"  wait="true"  top="0"  left="0"  width="755"  height="205"  ]
 [wait  time="300"  ]
 [playbgm  volume="80"  time="1000"  loop="true"  storage="dosoon_blues.ogg"  ]
-[tb_image_show  time="1"  storage="default/interval_quiz_logo.png"  width="960"  height="640"  name="img_20"  ]
-[tb_image_show  time="1"  storage="default/taikenban_1.0_logo.png"  width="960"  height="640"  x=""  y=""  _clickable_img=""  ]
+[bg  time="0"  method="crossfade"  storage="title_bg_2.png"  ]
+[call  storage="wait.ks"  target="*1000ms"  ]
 [tb_keyconfig  flag="1"  ]
 *title
 
