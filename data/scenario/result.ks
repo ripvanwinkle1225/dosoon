@@ -7,8 +7,8 @@
 [jump  storage="result.ks"  target="*fuseikai"  cond="f.answer!=f.interval"  ]
 *easy_mode
 
-[jump  storage="result.ks"  target="*seikai"  cond="f.itiji_moji==f.seikai_moji"  ]
-[jump  storage="result.ks"  target="*fuseikai"  cond="f.itiji_moji!=f.interval_name"  ]
+[jump  storage="result.ks"  target="*seikai"  cond="f.answer_name==f.seikai_moji"  ]
+[jump  storage="result.ks"  target="*fuseikai"  cond="f.answer_name!=f.seikai_moji"  ]
 *seikai
 
 [playse  volume="40"  time="1000"  buf="1"  storage="dodon.ogg"  ]

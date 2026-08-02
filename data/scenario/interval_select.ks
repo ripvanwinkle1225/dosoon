@@ -36,41 +36,49 @@
 *suuji_1
 
 [tb_eval  exp="f.itiji_hensuu=0"  name="itiji_hensuu"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
+[tb_eval  exp="f.answer_name='1度'"  name="answer_name"  cmd="="  op="t"  val="1度"  val_2="undefined"  ]
 [call  storage="interval_hyouji.ks"  target="*1"  ]
 [jump  storage="interval_select.ks"  target="*kanji_from1"  ]
 *suuji_2
 
 [tb_eval  exp="f.itiji_hensuu=10"  name="itiji_hensuu"  cmd="="  op="t"  val="10"  val_2="undefined"  ]
+[tb_eval  exp="f.answer_name='2度'"  name="answer_name"  cmd="="  op="t"  val="2度"  val_2="undefined"  ]
 [call  storage="interval_hyouji.ks"  target="*2"  ]
 [jump  storage="interval_select.ks"  target="*kanji_from2367"  ]
 *suuji_3
 
 [tb_eval  exp="f.itiji_hensuu=20"  name="itiji_hensuu"  cmd="="  op="t"  val="20"  val_2="undefined"  ]
+[tb_eval  exp="f.answer_name='3度'"  name="answer_name"  cmd="="  op="t"  val="3度"  val_2="undefined"  ]
 [call  storage="interval_hyouji.ks"  target="*3"  ]
 [jump  storage="interval_select.ks"  target="*kanji_from2367"  ]
 *suuji_4
 
 [tb_eval  exp="f.itiji_hensuu=29"  name="itiji_hensuu"  cmd="="  op="t"  val="29"  val_2="undefined"  ]
+[tb_eval  exp="f.answer_name='4度'"  name="answer_name"  cmd="="  op="t"  val="4度"  val_2="undefined"  ]
 [call  storage="interval_hyouji.ks"  target="*4"  ]
 [jump  storage="interval_select.ks"  target="*kanji_from4"  ]
 *suuji_5
 
 [tb_eval  exp="f.itiji_hensuu=39"  name="itiji_hensuu"  cmd="="  op="t"  val="39"  val_2="undefined"  ]
+[tb_eval  exp="f.answer_name='5度'"  name="answer_name"  cmd="="  op="t"  val="5度"  val_2="undefined"  ]
 [call  storage="interval_hyouji.ks"  target="*5"  ]
 [jump  storage="interval_select.ks"  target="*kanji_from5"  ]
 *suuji_6
 
 [tb_eval  exp="f.itiji_hensuu=49"  name="itiji_hensuu"  cmd="="  op="t"  val="49"  val_2="undefined"  ]
+[tb_eval  exp="f.answer_name='6度'"  name="answer_name"  cmd="="  op="t"  val="6度"  val_2="undefined"  ]
 [call  storage="interval_hyouji.ks"  target="*6"  ]
 [jump  storage="interval_select.ks"  target="*kanji_from2367"  ]
 *suuji_7
 
 [tb_eval  exp="f.itiji_hensuu=59"  name="itiji_hensuu"  cmd="="  op="t"  val="59"  val_2="undefined"  ]
+[tb_eval  exp="f.answer_name='7度'"  name="answer_name"  cmd="="  op="t"  val="7度"  val_2="undefined"  ]
 [call  storage="interval_hyouji.ks"  target="*7"  ]
 [jump  storage="interval_select.ks"  target="*kanji_from2367"  ]
 *suuji_8
 
 [tb_eval  exp="f.itiji_hensuu=68"  name="itiji_hensuu"  cmd="="  op="t"  val="68"  val_2="undefined"  ]
+[tb_eval  exp="f.answer_name='8度'"  name="answer_name"  cmd="="  op="t"  val="8度"  val_2="undefined"  ]
 [call  storage="interval_hyouji.ks"  target="*8"  ]
 [jump  storage="interval_select.ks"  target="*kanji_from8"  ]
 *kanji_from1
