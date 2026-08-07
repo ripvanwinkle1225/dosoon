@@ -29,11 +29,6 @@ originalStart.call(customGlink, pm);
 ;標準のメッセージレイヤを非表示
 
 
-[iscript]
-;以下1行、デバッグチェック時のための演出スキップ。
-[endscript]
-
-[jump  storage="scene1.ks"  target="*title"  ]
 [chara_show  name="title_logo"  time="0"  wait="true"  storage="chara/1/dosoon_logo.png"  width="755"  height="205"  top="-300"  left="0"  ]
 [call  storage="wait.ks"  target="*300ms"  ]
 [bg  time="500"  method="puffIn"  storage="title_bg.png"  cross="true"  ]
