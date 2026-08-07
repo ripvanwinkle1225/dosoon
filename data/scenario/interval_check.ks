@@ -1,5 +1,7 @@
 [_tb_system_call storage=system/_interval_check.ks]
 
+*0
+
 [tb_eval  exp="f.itiji_hensuu=f.second_note"  name="itiji_hensuu"  cmd="="  op="h"  val="second_note"  val_2="undefined"  ]
 [tb_eval  exp="f.itiji_hensuu-=f.first_note"  name="itiji_hensuu"  cmd="-="  op="h"  val="first_note"  val_2="undefined"  ]
 [tb_start_tyrano_code]

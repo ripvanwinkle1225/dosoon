@@ -1,5 +1,7 @@
 [_tb_system_call storage=system/_result.ks]
 
+*0
+
 [jump  storage="result.ks"  target="*easy_mode"  cond="f.easy_mode_on==1"  ]
 *normal_mode
 
@@ -19,7 +21,7 @@
 [playse  volume="40"  time="1000"  buf="2"  storage="seikai2.ogg"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-正解だよ！すごいね！[p]
+正解だよ！ すごいや！[p]
 [_tb_end_text]
 
 [tb_hide_message_window  ]
@@ -34,7 +36,7 @@
 [playse  volume="40"  time="1000"  buf="2"  storage="fuseikai1.ogg"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-ちがうよ！正解は「[emb exp="f.seikai_moji"]」だよ！[p]
+ちがうよ！ 正解は『[emb exp="f.seikai_moji"]』だよ！[p]
 [_tb_end_text]
 
 [tb_hide_message_window  ]

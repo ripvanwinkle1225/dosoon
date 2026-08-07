@@ -1,5 +1,7 @@
 [_tb_system_call storage=system/_first_acc_select.ks]
 
+*0
+
 [jump  storage="first_acc_select.ks"  target="*random"  cond="f.random_number!=0"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=2 ]
@@ -17,12 +19,14 @@
 *first_sharp
 
 [tb_eval  exp="f.first_note+=1"  name="first_note"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
-[tb_image_show  time="500"  storage="default/note_sharp.png"  width="109"  height="109"  x="30"  y="291"  _clickable_img=""  name="img_63"  ]
+[tb_image_show  time="300"  storage="default/note_sharp.png"  width="109"  height="109"  x="30"  y="291"  _clickable_img=""  name="img_63"  ]
+[call  storage="wait.ks"  target="*200ms"  ]
 [return  ]
 *first_flat
 
 [tb_eval  exp="f.first_note-=1"  name="first_note"  cmd="-="  op="t"  val="1"  val_2="undefined"  ]
-[tb_image_show  time="500"  storage="default/note_flat.png"  width="109"  height="109"  x="30"  y="291"  _clickable_img=""  name="img_68"  ]
+[tb_image_show  time="300"  storage="default/note_flat.png"  width="109"  height="109"  x="30"  y="291"  _clickable_img=""  name="img_68"  ]
+[call  storage="wait.ks"  target="*200ms"  ]
 [return  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]

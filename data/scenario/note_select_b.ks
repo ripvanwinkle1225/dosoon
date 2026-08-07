@@ -1,16 +1,18 @@
 [_tb_system_call storage=system/_note_select_b.ks]
 
-[jump  storage="note_select.ks"  target="*select"  cond="f.random_number==0"  ]
+*0
+
+[jump  storage="note_select_b.ks"  target="*select"  cond="f.random_number==0"  ]
 [tb_eval  exp="f.random_number=0"  name="random_number"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
 *select
 
-[glink  color="btn_02_black"  storage="note_select.ks"  size="40"  text="Ｃ"  x="20"  y="441"  width="95"  height="95"  _clickable_img=""  target="*c"  ]
-[glink  color="btn_02_black"  storage="note_select.ks"  size="40"  text="Ｄ"  x="130"  y="441"  width="95"  height="95"  _clickable_img=""  target="*d"  ]
-[glink  color="btn_02_black"  storage="note_select.ks"  size="40"  text="Ｅ"  x="240"  y="441"  width="95"  height="95"  _clickable_img=""  target="*e"  ]
-[glink  color="btn_02_black"  storage="note_select.ks"  size="40"  text="Ｆ"  x="350"  y="441"  width="95"  height="95"  _clickable_img=""  target="*f"  ]
-[glink  color="btn_02_black"  storage="note_select.ks"  size="40"  text="Ｇ"  x="460"  y="441"  width="95"  height="95"  _clickable_img=""  target="*g"  ]
-[glink  color="btn_02_black"  storage="note_select.ks"  size="40"  text="Ａ"  x="570"  y="441"  width="95"  height="95"  _clickable_img=""  target="*a"  ]
-[glink  color="btn_02_black"  storage="note_select.ks"  size="40"  text="Ｂ"  x="680"  y="441"  width="95"  height="95"  _clickable_img=""  target="*b"  ]
+[glink  color="btn_02_black"  storage="note_select_b.ks"  size="40"  text="Ｃ"  x="20"  y="441"  width="95"  height="95"  _clickable_img=""  target="*c"  ]
+[glink  color="btn_02_black"  storage="note_select_b.ks"  size="40"  text="Ｄ"  x="130"  y="441"  width="95"  height="95"  _clickable_img=""  target="*d"  ]
+[glink  color="btn_02_black"  storage="note_select_b.ks"  size="40"  text="Ｅ"  x="240"  y="441"  width="95"  height="95"  _clickable_img=""  target="*e"  ]
+[glink  color="btn_02_black"  storage="note_select_b.ks"  size="40"  text="Ｆ"  x="350"  y="441"  width="95"  height="95"  _clickable_img=""  target="*f"  ]
+[glink  color="btn_02_black"  storage="note_select_b.ks"  size="40"  text="Ｇ"  x="460"  y="441"  width="95"  height="95"  _clickable_img=""  target="*g"  ]
+[glink  color="btn_02_black"  storage="note_select_b.ks"  size="40"  text="Ａ"  x="570"  y="441"  width="95"  height="95"  _clickable_img=""  target="*a"  ]
+[glink  color="btn_02_black"  storage="note_select_b.ks"  size="40"  text="Ｂ"  x="680"  y="441"  width="95"  height="95"  _clickable_img=""  target="*b"  ]
 [s  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]

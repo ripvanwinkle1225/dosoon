@@ -1,5 +1,7 @@
 [_tb_system_call storage=system/_note_check.ks]
 
+*0
+
 [jump  storage="note_check.ks"  target="*cf1"  cond="f.itiji_hensuu==13"  ]
 [jump  storage="note_check.ks"  target="*c1"  cond="f.itiji_hensuu==14"  ]
 [jump  storage="note_check.ks"  target="*cs1"  cond="f.itiji_hensuu==15"  ]

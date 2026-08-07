@@ -1,5 +1,7 @@
 [_tb_system_call storage=system/_note_select.ks]
 
+*0
+
 [jump  storage="note_select.ks"  target="*select"  cond="f.random_number==0"  ]
 [tb_eval  exp="f.random_number=0"  name="random_number"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
 *select

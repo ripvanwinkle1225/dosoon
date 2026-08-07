@@ -1,5 +1,7 @@
 [_tb_system_call storage=system/_second_oct_up_check.ks]
 
+*0
+
 [jump  storage="second_oct_up_check.ks"  target="*oct_up_select"  cond="f.first_note==f.second_note"  ]
 [tb_eval  exp="f.second_note-=1"  name="second_note"  cmd="-="  op="t"  val="1"  val_2="undefined"  ]
 [jump  storage="second_oct_up_check.ks"  target="*second_note_plus1"  cond="f.first_note==f.second_note"  ]
@@ -25,7 +27,7 @@
 
 [tb_hide_message_window  ]
 [glink  color="btn_02_black"  storage="second_oct_up_check.ks"  size="40"  text="基準の音と同じオクターブのほうで"  target="*oct_up_no"  x="20"  y="401"  width=""  height="95"  _clickable_img=""  ]
-[glink  color="btn_02_black"  storage="second_oct_up_check.ks"  size="40"  text="基準の音の１オクターブ高いほうで"  target="*oct_up"  x="20"  y="521"  width=""  height="95"  _clickable_img=""  ]
+[glink  color="btn_02_black"  storage="second_oct_up_check.ks"  size="40"  text="基準の音の1オクターブ高いほうで"  target="*oct_up"  x="20"  y="521"  width=""  height="95"  _clickable_img=""  ]
 [s  ]
 *oct_up
 

@@ -1,24 +1,14 @@
 [_tb_system_call storage=system/_interval_select_b.ks]
 
+*0
+
 [tb_eval  exp="f.random_number=0"  name="random_number"  cmd="="  op="t"  val="0"  val_2="undefined"  ]
-[jump  storage="interval_select_b.ks"  target="*easy_message"  cond="f.easy_mode_on==1"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 次に度数を決めてね！[p]
 [_tb_end_text]
 
 [tb_hide_message_window  ]
-[jump  storage="interval_select_b.ks"  target="*first_note_check"  ]
-[s  ]
-*easy_message
-
-[tb_show_message_window  ]
-[tb_start_text mode=1 ]
-それじゃ、この2音間の度数の数字だけを当ててね！[p]
-[_tb_end_text]
-
-[tb_hide_message_window  ]
-[jump  storage="interval_select_b.ks"  target="*first_note_check"  ]
 *first_note_check
 
 [jump  storage="interval_select_b.ks"  target="*cf"  cond="f.first_note==13"  ]
@@ -471,7 +461,6 @@ interval_select_b内のfirst_note_checkにおいてどの選択肢にも当て�
 *kanji_p1
 
 [jump  storage="interval_select_b.ks"  target="*kanji_p1_random"  cond="f.random_number!=0"  ]
-[jump  storage="interval_select_b.ks"  target="*easy_mode"  cond="f.easy_mode_on==1"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=2 ]
 漢字の部分は？[l][r]
@@ -492,7 +481,6 @@ interval_select_b内のfirst_note_checkにおいてどの選択肢にも当て�
 *kanji_p2
 
 [jump  storage="interval_select_b.ks"  target="*kanji_p2_random"  cond="f.random_number!=0"  ]
-[jump  storage="interval_select_b.ks"  target="*easy_mode"  cond="f.easy_mode_on==1"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=2 ]
 漢字の部分は？[l][r]
@@ -513,7 +501,6 @@ interval_select_b内のfirst_note_checkにおいてどの選択肢にも当て�
 *kanji_p3
 
 [jump  storage="interval_select_b.ks"  target="*kanji_p3_random"  cond="f.random_number!=0"  ]
-[jump  storage="interval_select_b.ks"  target="*easy_mode"  cond="f.easy_mode_on==1"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=2 ]
 漢字の部分は？[l][r]
@@ -534,7 +521,6 @@ interval_select_b内のfirst_note_checkにおいてどの選択肢にも当て�
 *kanji_p4
 
 [jump  storage="interval_select_b.ks"  target="*kanji_p4_random"  cond="f.random_number!=0"  ]
-[jump  storage="interval_select_b.ks"  target="*easy_mode"  cond="f.easy_mode_on==1"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=2 ]
 漢字の部分は？[l][r]
@@ -555,7 +541,6 @@ interval_select_b内のfirst_note_checkにおいてどの選択肢にも当て�
 *kanji_p4_1
 
 [jump  storage="interval_select_b.ks"  target="*kanji_p4_1_random"  cond="f.random_number!=0"  ]
-[jump  storage="interval_select_b.ks"  target="*easy_mode"  cond="f.easy_mode_on==1"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=2 ]
 漢字の部分は？[l][r]
@@ -574,7 +559,6 @@ interval_select_b内のfirst_note_checkにおいてどの選択肢にも当て�
 *kanji_p4_2
 
 [jump  storage="interval_select_b.ks"  target="*kanji_p4_2_random"  cond="f.random_number!=0"  ]
-[jump  storage="interval_select_b.ks"  target="*easy_mode"  cond="f.easy_mode_on==1"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=2 ]
 漢字の部分は？[l][r]
@@ -590,7 +574,6 @@ interval_select_b内のfirst_note_checkにおいてどの選択肢にも当て�
 *kanji_p5
 
 [jump  storage="interval_select_b.ks"  target="*kanji_p5_random"  cond="f.random_number!=0"  ]
-[jump  storage="interval_select_b.ks"  target="*easy_mode"  cond="f.easy_mode_on==1"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=2 ]
 漢字の部分は？[l][r]
@@ -611,7 +594,6 @@ interval_select_b内のfirst_note_checkにおいてどの選択肢にも当て�
 *kanji_mm1
 
 [jump  storage="interval_select_b.ks"  target="*kanji_mm1_random"  cond="f.random_number!=0"  ]
-[jump  storage="interval_select_b.ks"  target="*easy_mode"  cond="f.easy_mode_on==1"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=2 ]
 漢字の部分は？[l][r]
@@ -632,7 +614,6 @@ interval_select_b内のfirst_note_checkにおいてどの選択肢にも当て�
 *kanji_mm2
 
 [jump  storage="interval_select_b.ks"  target="*kanji_mm2_random"  cond="f.random_number!=0"  ]
-[jump  storage="interval_select_b.ks"  target="*easy_mode"  cond="f.easy_mode_on==1"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=2 ]
 漢字の部分は？[l][r]
@@ -653,7 +634,6 @@ interval_select_b内のfirst_note_checkにおいてどの選択肢にも当て�
 *kanji_mm3
 
 [jump  storage="interval_select_b.ks"  target="*kanji_mm3_random"  cond="f.random_number!=0"  ]
-[jump  storage="interval_select_b.ks"  target="*easy_mode"  cond="f.easy_mode_on==1"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=2 ]
 漢字の部分は？[l][r]
@@ -674,7 +654,6 @@ interval_select_b内のfirst_note_checkにおいてどの選択肢にも当て�
 *kanji_mm4
 
 [jump  storage="interval_select_b.ks"  target="*kanji_mm4_random"  cond="f.random_number!=0"  ]
-[jump  storage="interval_select_b.ks"  target="*easy_mode"  cond="f.easy_mode_on==1"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=2 ]
 漢字の部分は？[l][r]
@@ -746,7 +725,4 @@ interval_select_b内のfirst_note_checkにおいてどの選択肢にも当て�
 
 [tb_eval  exp="f.itiji_hensuu+=3"  name="itiji_hensuu"  cmd="+="  op="t"  val="3"  val_2="undefined"  ]
 [call  storage="interval_hyouji_b.ks"  target="*ww_aug"  ]
-[return  ]
-*easy_mode
-
 [return  ]

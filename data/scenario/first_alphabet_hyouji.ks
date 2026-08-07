@@ -1,5 +1,7 @@
 [_tb_system_call storage=system/_first_alphabet_hyouji.ks]
 
+*0
+
 [jump  storage="first_alphabet_hyouji.ks"  target="*c"  cond="f.first_note==14"  ]
 [jump  storage="first_alphabet_hyouji.ks"  target="*d"  cond="f.first_note==24"  ]
 [jump  storage="first_alphabet_hyouji.ks"  target="*e"  cond="f.first_note==34"  ]
@@ -16,29 +18,36 @@
 [s  ]
 *c
 
-[tb_image_show  time="500"  storage="default/note_c.png"  width="109"  height="109"  x="30"  y="291"  _clickable_img=""  name="img_17"  ]
+[tb_image_show  time="300"  storage="default/note_c.png"  width="109"  height="109"  x="30"  y="291"  _clickable_img=""  name="img_17"  ]
+[call  storage="wait.ks"  target="*200ms"  ]
 [return  ]
 *d
 
-[tb_image_show  time="500"  storage="default/note_d.png"  width="109"  height="109"  x="30"  y="291"  _clickable_img=""  name="img_22"  ]
+[tb_image_show  time="300"  storage="default/note_d.png"  width="109"  height="109"  x="30"  y="291"  _clickable_img=""  name="img_22"  ]
+[call  storage="wait.ks"  target="*200ms"  ]
 [return  ]
 *e
 
-[tb_image_show  time="500"  storage="default/note_e.png"  width="109"  height="109"  x="30"  y="291"  _clickable_img=""  name="img_27"  ]
+[tb_image_show  time="300"  storage="default/note_e.png"  width="109"  height="109"  x="30"  y="291"  _clickable_img=""  name="img_27"  ]
+[call  storage="wait.ks"  target="*200ms"  ]
 [return  ]
 *f
 
-[tb_image_show  time="500"  storage="default/note_f.png"  width="109"  height="109"  x="30"  y="291"  _clickable_img=""  name="img_32"  ]
+[tb_image_show  time="300"  storage="default/note_f.png"  width="109"  height="109"  x="30"  y="291"  _clickable_img=""  name="img_32"  ]
+[call  storage="wait.ks"  target="*200ms"  ]
 [return  ]
 *g
 
-[tb_image_show  time="500"  storage="default/note_g.png"  width="109"  height="109"  x="30"  y="291"  _clickable_img=""  name="img_37"  ]
+[tb_image_show  time="300"  storage="default/note_g.png"  width="109"  height="109"  x="30"  y="291"  _clickable_img=""  name="img_37"  ]
+[call  storage="wait.ks"  target="*200ms"  ]
 [return  ]
 *a
 
-[tb_image_show  time="500"  storage="default/note_a.png"  width="109"  height="109"  x="30"  y="291"  _clickable_img=""  name="img_42"  ]
+[tb_image_show  time="300"  storage="default/note_a.png"  width="109"  height="109"  x="30"  y="291"  _clickable_img=""  name="img_42"  ]
+[call  storage="wait.ks"  target="*200ms"  ]
 [return  ]
 *b
 
-[tb_image_show  time="500"  storage="default/note_b.png"  width="109"  height="109"  x="30"  y="291"  _clickable_img=""  name="img_47"  ]
+[tb_image_show  time="300"  storage="default/note_b.png"  width="109"  height="109"  x="30"  y="291"  _clickable_img=""  name="img_47"  ]
+[call  storage="wait.ks"  target="*200ms"  ]
 [return  ]

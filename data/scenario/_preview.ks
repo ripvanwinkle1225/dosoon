@@ -2,6 +2,8 @@
 
 [mask time=10]
 [mask_off time=10]
+*0
+
 [tb_start_tyrano_code]
 [iscript]
 var customGlink = window.TYRANO.kag.ftag.master_tag.glink;
@@ -29,26 +31,39 @@ originalStart.call(customGlink, pm);
 ;標準のメッセージレイヤを非表示
 
 
+[iscript]
+;以下1行、デバッグチェック時のための演出スキップ。
+[endscript]
+
+[jump  storage="scene1.ks"  target="*title"  ]
 [chara_show  name="title_logo"  time="0"  wait="true"  storage="chara/1/dosoon_logo.png"  width="755"  height="205"  top="-300"  left="0"  ]
 [call  storage="wait.ks"  target="*300ms"  ]
 [bg  time="500"  method="puffIn"  storage="title_bg.png"  cross="true"  ]
 [tb_start_tyrano_code]
-; --- 1. アニメーションの動きを定義 ---
+;●以下、ドスーンをはじめの1回だけフェードインさせ、その後は上下に動き続けさせる設定。
+
+; --- 1. ループアニメーションの動きを定義（上下の往復のみ、透明度は100%固定） ---
 [keyframe name="dosoon_loop_anim"]
 [frame p="0%"   y="0"]
 [frame p="50%"  y="-20"]
 [frame p="100%" y="0"]
 [endkeyframe]
 
-; --- 2. 画像を手前レイヤーに配置（x の数値を 500 に大きくして右にずらしました） ---
-[image name="my_dosoon" storage="../bgimage/dosoon.png" layer="1" visible="true" x="680" y="160" width="260" height="230"]
+; --- 2. 画像を手前レイヤーに配置 ---
+; time="0" と wait="true" を指定して、最初は非表示（フェード用の裏側）で生成します
+[image name="my_dosoon" storage="../bgimage/dosoon.png" layer="1" visible="true" x="680" y="160" width="260" height="230" time="0" wait="true"]
 
-; --- 3. 無限ループアニメーションを実行 ---
+; --- 3. まず通常のアニメーションタグ[anim]で、1回限りのフェードインを実行 ---
+; 最初の一瞬で opacity="0" に落とし、そこから 1000ミリ秒（1秒）かけて不透明度を 255（最大値）にします
+[anim name="my_dosoon" time="0" opacity="0"]
+[anim name="my_dosoon" time="1000" opacity="255"]
+[wa]
+
+; --- 4. フェードイン完了後、無限ループアニメーションを開始 ---
 [kanim name="my_dosoon" keyframe="dosoon_loop_anim" time="4000" count="infinite" easing="linear" wait="false"]
 
 [_tb_end_tyrano_code]
 
-[call  storage="wait.ks"  target="*300ms"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="se_doon_2.ogg"  clear="true"  ]
 [chara_move  name="title_logo"  anim="true"  time="500"  effect="easeInQuad"  wait="true"  left="0"  top="0"  width="755"  height="205"  ]
 [chara_move  name="title_logo"  anim="true"  time="250"  effect="easeOutQuad"  wait="true"  top="-120"  left="0"  width="755"  height="205"  ]
@@ -70,8 +85,9 @@ originalStart.call(customGlink, pm);
 ;タイトル各種ボタン
 
 
-[glink  color="btn_02_black"  text="モードＡであそぶ！"  x="275"  y="280"  size="40"  target="*mode_a"  width="410"  height="90"  _clickable_img=""  ]
+[glink  color="btn_02_black"  text="モードＡであそぶ！"  x="275"  y="280"  size="40"  target="*mode_a"  width="410"  height="95"  _clickable_img=""  ]
 [glink  color="btn_02_black"  text="モードＢであそぶ！"  x="275"  y="390"  size="40"  target="*mode_b"  width="410"  height="95"  _clickable_img=""  ]
+[glink  color="btn_02_black"  storage="scene1.ks"  size="40"  x="275"  text="せつめい！"  y="500"  width="410"  height="95"  _clickable_img=""  target="*go_to_setumei"  ]
 [s  ]
 *mode_a
 
@@ -81,13 +97,18 @@ originalStart.call(customGlink, pm);
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-このモードでいい？[p]
+モードAでいい？[p]
 [_tb_end_text]
 
 [tb_hide_message_window  ]
-[glink  color="btn_02_black"  storage="mode_a.ks"  size="40"  text="いいよ"  x="100"  y="420"  width=""  height=""  _clickable_img=""  ]
+[glink  color="btn_02_black"  storage="scene1.ks"  size="40"  text="いいよ"  x="100"  y="420"  width=""  height=""  _clickable_img=""  target="*go_to_mode_a"  ]
 [glink  color="btn_02_black"  storage="scene1.ks"  size="40"  text="やっぱやめた"  x="560"  y="420"  width=""  height=""  _clickable_img=""  target="*title"  ]
 [s  ]
+*go_to_mode_a
+
+[chara_hide_all  time="0"  wait="false"  ]
+[tb_image_hide  time="0"  ]
+[jump  storage="mode_a.ks"  target="*0"  ]
 *mode_b
 
 [tb_show_message_window  ]
@@ -100,10 +121,20 @@ originalStart.call(customGlink, pm);
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-このモードでいい？[p]
+モードBでいい？[p]
 [_tb_end_text]
 
 [tb_hide_message_window  ]
-[glink  color="btn_02_black"  storage="mode_b.ks"  size="40"  text="いいよ"  x="100"  y="420"  width=""  height=""  _clickable_img=""  target=""  ]
+[glink  color="btn_02_black"  storage="scene1.ks"  size="40"  text="いいよ"  x="100"  y="420"  width=""  height=""  _clickable_img=""  target="*go_to_mode_b"  ]
 [glink  color="btn_02_black"  storage="scene1.ks"  size="40"  text="やっぱやめた"  x="560"  y="420"  width=""  height=""  _clickable_img=""  target="*title"  ]
 [s  ]
+*go_to_mode_b
+
+[chara_hide_all  time="0"  wait="false"  ]
+[tb_image_hide  time="0"  ]
+[jump  storage="mode_b.ks"  target="*0"  ]
+*go_to_setumei
+
+[chara_hide_all  time="0"  wait="false"  ]
+[tb_image_hide  time="0"  ]
+[jump  storage="setumei.ks"  target="*0"  ]

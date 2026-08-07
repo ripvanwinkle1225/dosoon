@@ -1,9 +1,11 @@
 [_tb_system_call storage=system/_interval_select.ks]
 
+*0
+
 [jump  storage="interval_select.ks"  target="*easy_message"  cond="f.easy_mode_on==1"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-それじゃ、この2音間の度数を当ててね！[p]
+それじゃ、答えの度数を当ててね！[p]
 [_tb_end_text]
 
 [tb_start_text mode=2 ]
@@ -17,7 +19,7 @@
 
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-それじゃ、この2音間の度数の数字だけを当ててね！[p]
+それじゃ、答えの度数を当ててね！[p]
 [_tb_end_text]
 
 [tb_hide_message_window  ]

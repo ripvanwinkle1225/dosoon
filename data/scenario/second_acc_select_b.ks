@@ -1,5 +1,8 @@
 [_tb_system_call storage=system/_second_acc_select_b.ks]
 
+*0
+
+[jump  storage="second_acc_select_b.ks"  target="*acc_select_skip"  cond="f.easy_mode_on==1"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=2 ]
 ♯や♭をつける？[l][r]
@@ -16,12 +19,14 @@
 *second_sharp
 
 [tb_eval  exp="f.second_note+=1"  name="second_note"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
-[tb_image_show  time="500"  storage="default/note_sharp.png"  width="109"  height="109"  x="758"  y="291"  _clickable_img=""  name="img_11"  ]
+[tb_image_show  time="300"  storage="default/note_sharp.png"  width="109"  height="109"  x="758"  y="291"  _clickable_img=""  name="img_11"  ]
+[call  storage="wait.ks"  target="*200ms"  ]
 [return  ]
 *second_flat
 
 [tb_eval  exp="f.second_note-=1"  name="second_note"  cmd="-="  op="t"  val="1"  val_2="undefined"  ]
-[tb_image_show  time="500"  storage="default/note_flat.png"  width="109"  height="109"  x="758"  y="291"  _clickable_img=""  name="img_15"  ]
+[tb_image_show  time="300"  storage="default/note_flat.png"  width="109"  height="109"  x="758"  y="291"  _clickable_img=""  name="img_15"  ]
+[call  storage="wait.ks"  target="*200ms"  ]
 [return  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
@@ -30,3 +35,23 @@
 [_tb_end_text]
 
 [s  ]
+*acc_select_skip
+
+[return  ]
+*acc_auto_select
+
+[jump  storage="second_acc_select_b.ks"  target="*second_natural"  cond="f.second_note==f.interval"  ]
+[tb_eval  exp="f.second_note+=1"  name="second_note"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
+[jump  storage="second_acc_select_b.ks"  target="*minus_1_and_go_to_sharp"  cond="f.second_note==f.interval"  ]
+[tb_eval  exp="f.second_note-=2"  name="second_note"  cmd="-="  op="t"  val="2"  val_2="undefined"  ]
+[jump  storage="second_acc_select_b.ks"  target="*plus_1_and_go_to_flat"  cond="f.second_note==f.interval"  ]
+[tb_eval  exp="f.second_note+=1"  name="second_note"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
+[return  ]
+*minus_1_and_go_to_sharp
+
+[tb_eval  exp="f.second_note-=1"  name="second_note"  cmd="-="  op="t"  val="1"  val_2="undefined"  ]
+[jump  storage="second_acc_select_b.ks"  target="*second_sharp"  ]
+*plus_1_and_go_to_flat
+
+[tb_eval  exp="f.second_note+=1"  name="second_note"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
+[jump  storage="second_acc_select_b.ks"  target="*second_flat"  ]
