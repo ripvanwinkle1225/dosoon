@@ -68,7 +68,7 @@ originalStart.call(customGlink, pm);
 [chara_move  name="title_logo"  anim="true"  time="100"  effect="easeOutQuad"  wait="true"  top="-15"  left="0"  width="755"  height="205"  ]
 [chara_move  name="title_logo"  anim="true"  time="100"  effect="easeInQuad"  wait="true"  top="0"  left="0"  width="755"  height="205"  ]
 [wait  time="300"  ]
-[playbgm  volume="80"  time="1000"  loop="true"  storage="dosoon_blues.ogg"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="dosoon_blues_ver2.ogg"  ]
 [bg  time="0"  method="crossfade"  storage="title_bg_2.png"  ]
 [call  storage="wait.ks"  target="*1000ms"  ]
 [tb_keyconfig  flag="1"  ]
