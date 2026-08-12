@@ -157,10 +157,11 @@
 ;イージーレベルでは臨時記号選択をスキップして進む。
 [_tb_end_tyrano_code]
 
-[call  storage="second_oct_up_check.ks"  target="*0"  ]
+[call  storage="second_oct_up_check.ks"  target=""  ]
 [tb_start_tyrano_code]
 ;↑second_oct_up_check内はfirst_noteとsecond_noteを参照し、second_noteを操作。
-;↓イージーレベルではこの段階でacc_auto_selectをコール。
+;↑イージーレベルでは第二音が第一音と同じアルファベットだった時のみ、オクターブ選択。
+;↓そしてイージーレベルではここでacc_auto_selectをコール。
 [_tb_end_tyrano_code]
 
 [call  storage="second_acc_select_b.ks"  target="*acc_auto_select"  cond="f.easy_mode_on==1"  ]
@@ -197,6 +198,11 @@
 [tb_eval  exp="f.itiji_hensuu-=f.first_note"  name="itiji_hensuu"  cmd="-="  op="h"  val="first_note"  val_2="undefined"  ]
 [call  storage="mode_b.ks"  target="*oct_ue_no_check_2"  cond="f.itiji_hensuu>65"  ]
 [call  storage="result.ks"  target="*0"  ]
+[tb_start_tyrano_code]
+;鍵盤表示位置の変数だけを初期値に戻しておく。
+[eval exp="f.kenban_position=''"]
+[_tb_end_tyrano_code]
+
 [glink  color="btn_02_black"  storage="mode_b.ks"  size="40"  text="つづける"  target="*game_start"  x="20"  y="441"  width="210"  height="90"  _clickable_img=""  ]
 [glink  color="btn_02_black"  storage="return_to_title.ks"  size="40"  text="タイトルに戻る"  x="250"  y="441"  width="330"  height="90"  _clickable_img=""  target="*0"  ]
 [s  ]

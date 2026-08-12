@@ -1,5 +1,6 @@
 [_tb_system_call storage=system/_second_oct_up_check.ks]
 
+[jump  storage="second_oct_up_check.ks"  target="*easy_mode_alphabet_check"  cond="f.easy_mode_on==1"  ]
 *0
 
 [jump  storage="second_oct_up_check.ks"  target="*oct_up_select"  cond="f.first_note==f.second_note"  ]
@@ -40,3 +41,9 @@
 [_tb_end_text]
 
 [s  ]
+*easy_mode_alphabet_check
+
+[tb_eval  exp="f.itiji_hensuu=f.second_note"  name="itiji_hensuu"  cmd="="  op="h"  val="second_note"  val_2="undefined"  ]
+[tb_eval  exp="f.itiji_hensuu+=1"  name="itiji_hensuu"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
+[jump  storage="second_oct_up_check.ks"  target="*oct_up_select"  cond="f.itiji_hensuu==f.first_note"  ]
+[jump  storage="second_oct_up_check.ks"  target="*0"  ]

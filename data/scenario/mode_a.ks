@@ -158,6 +158,11 @@
 
 [tb_eval  exp="f.answer=f.itiji_hensuu"  name="answer"  cmd="="  op="h"  val="itiji_hensuu"  val_2="undefined"  ]
 [call  storage="result.ks"  target="*0"  ]
+[tb_start_tyrano_code]
+;鍵盤表示位置の変数だけを初期値に戻しておく。
+[eval exp="f.kenban_position=''"]
+[_tb_end_tyrano_code]
+
 [glink  color="btn_02_black"  storage="mode_a.ks"  size="40"  text="つづける"  target="*game_start"  x="20"  y="441"  width="210"  height="90"  _clickable_img=""  ]
 [glink  color="btn_02_black"  storage="return_to_title.ks"  size="40"  text="タイトルに戻る"  x="250"  y="441"  width="330"  height="90"  _clickable_img=""  target="*0"  ]
 [s  ]

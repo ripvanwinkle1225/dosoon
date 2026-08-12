@@ -31,11 +31,6 @@ originalStart.call(customGlink, pm);
 ;標準のメッセージレイヤを非表示
 
 
-[iscript]
-;以下1行、デバッグチェック時のための演出スキップ。
-[endscript]
-
-[jump  storage="scene1.ks"  target="*title"  ]
 [chara_show  name="title_logo"  time="0"  wait="true"  storage="chara/1/dosoon_logo.png"  width="755"  height="205"  top="-300"  left="0"  ]
 [call  storage="wait.ks"  target="*300ms"  ]
 [bg  time="500"  method="puffIn"  storage="title_bg.png"  cross="true"  ]
@@ -75,7 +70,7 @@ originalStart.call(customGlink, pm);
 [chara_move  name="title_logo"  anim="true"  time="100"  effect="easeOutQuad"  wait="true"  top="-15"  left="0"  width="755"  height="205"  ]
 [chara_move  name="title_logo"  anim="true"  time="100"  effect="easeInQuad"  wait="true"  top="0"  left="0"  width="755"  height="205"  ]
 [wait  time="300"  ]
-[playbgm  volume="80"  time="1000"  loop="true"  storage="dosoon_blues.ogg"  ]
+[playbgm  volume="100"  time="1000"  loop="true"  storage="dosoon_blues_ver2.ogg"  ]
 [bg  time="0"  method="crossfade"  storage="title_bg_2.png"  ]
 [call  storage="wait.ks"  target="*1000ms"  ]
 [tb_keyconfig  flag="1"  ]
