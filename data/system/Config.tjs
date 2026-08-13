@@ -5,7 +5,7 @@
 ;System.title=dosoon_test
 ;projectID=dosoon_test
 ;game_version=0.0
-;ScreenRatio=fit
+;ScreenRatio=fix
 ;patch_apply_auto=true
 ;ScreenCentering=true
 ;useCamera=true
