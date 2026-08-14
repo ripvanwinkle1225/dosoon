@@ -3,9 +3,8 @@
 <head>
   <title>Loading TyranoScript</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <script>window.tyrano_screen_orientation = "none";</script>
-  <style>html, body, #tyrano_base { width: 100vw !important; height: 100vh !important; }</style>
   <script>window.addEventListener("resize", function(){ if($.tyrano) { $.tyrano.changeWindowSize(); } });</script>
 
         <meta name="robots" content="noindex,nofollow" />
@@ -37,26 +36,7 @@
             }
 
         </script>
-<style>
-  html, body {
-    width: 100% !important;
-    height: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: hidden !important;
-    background-color: #000000; /* 画面外の余白を黒にする設定 */
-  }
-  #tyrano_base {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    background-size: contain !important; /* アスペクト比を維持して最大化 */
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-  }
-</style>
+
 
 
 
@@ -150,7 +130,3 @@
         
         
     </body>
-<script>
-window.addEventListener("resize", function(){ setTimeout(function(){ window.scrollTo(0,1); }, 100); });
-</script>
-</html>
