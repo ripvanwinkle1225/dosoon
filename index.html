@@ -98,7 +98,7 @@
         <script src="./tyrano/libs/lz-string.min.js"></script>
         
 
-        <!-- 画面の巨大化・拡大バグを強制的に防ぐ修正スタイル -->
+                <!-- 画面の巨大化・拡大バグを強制的に防ぐ修正スタイル -->
         <style>
             html, body {
                 width: 100% !important;
@@ -109,17 +109,13 @@
                 background-color: #000000 !important;
             }
             #tyrano_base {
-                position: absolute !important;
-                top: 50% !important;
-                left: 50% !important;
-                transform: translate(-50%, -50%) scale(var(--tyrano-scale, 1)) !important;
-                transform-origin: center center !important;
                 max-width: 100% !important;
                 max-height: 100% !important;
-                width: 960px !important;  /* Config.tjsの幅に合わせる */
-                height: 640px !important; /* Config.tjsの高さに合わせる */
+                box-sizing: border-box !important;
             }
         </style>
+
+
 
 
         
