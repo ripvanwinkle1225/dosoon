@@ -5,10 +5,14 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
 
-  <script>window.tyrano_screen_orientation = "landscape";</script>
+  <script>window.tyrano_screen_orientation = "none";</script>
 
-<script>window.addEventListener("resize", function(){ if($.tyrano) { $.tyrano.changeWindowSize(); } }); window.addEventListener("load", function(){ setTimeout(function(){ if($.tyrano){ $.tyrano.changeWindowSize(); } }, 300); }); window.addEventListener("orientationchange", function(){ setTimeout(function(){ if($.tyrano){ $.tyrano.changeWindowSize(); } }, 300); });</script>
-
+<script>
+function tyrano_force_resize(){ if($.tyrano){ $.tyrano.changeWindowSize(); } }
+window.addEventListener("resize", function(){ tyrano_force_resize(); setTimeout(tyrano_force_resize, 200); setTimeout(tyrano_force_resize, 500); });
+window.addEventListener("load", function(){ setTimeout(tyrano_force_resize, 300); });
+window.addEventListener("orientationchange", function(){ setTimeout(tyrano_force_resize, 200); setTimeout(tyrano_force_resize, 500); });
+</script>
 
         <meta name="robots" content="noindex,nofollow" />
 
