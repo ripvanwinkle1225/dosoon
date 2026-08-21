@@ -1,6 +1,11 @@
 [_tb_system_call storage=system/_title_screen.ks]
 
 [tb_start_tyrano_code]
+[call storage="resizecall.ks"]
+[set_resizecall storage="resizecall.ks"]
+[_tb_end_tyrano_code]
+
+[tb_start_tyrano_code]
 [iscript]
 // ゲーム起動時のまっさらな変数の状態（初期値）を記憶します
 // すでに記憶がある場合はスルーするので安心です
