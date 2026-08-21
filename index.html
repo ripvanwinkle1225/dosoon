@@ -1,19 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Loading TyranoScript</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+    <head>
+        <title>Loading TyranoScript</title>
 
-  <script>window.tyrano_screen_orientation = "none";</script>
-
-<script>
-function tyrano_force_resize(){ if($.tyrano){ $.tyrano.changeWindowSize(); } }
-window.addEventListener("resize", function(){ tyrano_force_resize(); setTimeout(tyrano_force_resize, 200); setTimeout(tyrano_force_resize, 500); });
-window.addEventListener("load", function(){ setTimeout(tyrano_force_resize, 300); });
-window.addEventListener("orientationchange", function(){ setTimeout(tyrano_force_resize, 200); setTimeout(tyrano_force_resize, 500); });
-</script>
-
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
         <meta name="robots" content="noindex,nofollow" />
 
         <link href="./tyrano/tyrano.css" rel="stylesheet" />
@@ -44,9 +35,6 @@ window.addEventListener("orientationchange", function(){ setTimeout(tyrano_force
 
         </script>
 
-
-
-
         <!-- jQuery Plugins -->
         <script src="./tyrano/libs/jquery-migrate-1.4.1.js"></script>
         <script src="./tyrano/libs/jquery-ui/jquery-ui.min.js"></script>
@@ -75,7 +63,6 @@ window.addEventListener("orientationchange", function(){ setTimeout(tyrano_force
         <script src="./tyrano/tyrano.js"></script>
         <script src="./tyrano/tyrano.base.js"></script>
         <script src="./tyrano/plugins/kag/kag.js"></script>
-<script type="text/javascript">tyrano.plugin.kag.config.default_case_insensitive = true; delete tyrano.plugin.kag.variable.sf._title_screen;</script>
         <script src="./tyrano/plugins/kag/kag.event.js"></script>
         <script src="./tyrano/plugins/kag/kag.key_mouse.js"></script>
         <script src="./tyrano/plugins/kag/kag.layer.js"></script>
@@ -101,7 +88,7 @@ window.addEventListener("orientationchange", function(){ setTimeout(tyrano_force
         <script src="./tyrano/libs/jsQR.js"></script>
         <script src="./tyrano/libs/anime.min.js"></script>
         <script src="./tyrano/libs/lz-string.min.js"></script>
-
+        
     </head>
 
     <body onselectstart="return false" onContextmenu="return false" ontouchmove="event.preventDefault()">
@@ -137,3 +124,4 @@ window.addEventListener("orientationchange", function(){ setTimeout(tyrano_force
         
         
     </body>
+</html>
