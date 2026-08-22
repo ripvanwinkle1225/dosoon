@@ -17,13 +17,6 @@ originalStart.call(customGlink, pm);
 
 [tb_clear_images]
 
-[tb_start_tyrano_code]
-[position width=840 height=180 top=441 left=60]
-[position page=fore margint=10 marginl=10 marginr=10 marginb=10 vertical=false opacity="180" radius="0" color="0x000000" ]
-[free name="chara_name_area" layer="message0"]
-[ptext name="chara_name_area" layer="message0" color=0xFFFFFF size=26 x=190 y=461 bold="bold" edge="" shadow=""]
-[_tb_end_tyrano_code]
-
 [tb_keyconfig  flag="0"  ]
 
 ;標準のメッセージレイヤを非表示

@@ -1,6 +1,9 @@
 [_tb_system_call storage=system/_title_screen.ks]
 
 [tb_start_tyrano_code]
+;レスポンシブ対応
+;1行目：起動時に1度レイアウトをチェックして適用します。
+;2行目：プレイヤーがスマホの向きを変えた瞬間に、自動で resizecall.ks を再度呼び出して画面を再構成させます。
 [call storage="resizecall.ks"]
 [set_resizecall storage="resizecall.ks"]
 [_tb_end_tyrano_code]
